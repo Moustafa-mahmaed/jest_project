@@ -1,12 +1,41 @@
 import React from "react"
 import Enzyme,{shallow} from 'enzyme';
+
 import Headerline from "./index"
-import {findByAttr} from "../../utils"
+import {findByAttr ,checkProps} from "../../utils"
 const setUp=(props={})=>{
  const componet =shallow(<Headerline {...props} />);
 return componet;
 }
+
 describe('headerline component', () => {
+
+describe('checking proptypes', () => {
+    it('should not throw awarning  ', () => {
+        const expectedprops={
+            header:"test header",
+            desc:"test desc",
+            tempArr:[
+                {
+                    fName:"test fName",
+                    lName:"test fName",
+                    age:23,
+                    email:"test@gmail.com",
+                    onlinestatus:true
+               
+               
+                }
+            ]
+        };
+        const propsErr =checkProps(Headerline ,  expectedprops)
+        
+        expect(propsErr).toBeUndefined();
+        
+    });
+    
+});
+
+
     describe('have props ', () => {
 
     let wrapper;
