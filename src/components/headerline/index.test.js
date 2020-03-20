@@ -18,7 +18,7 @@ describe('checking proptypes', () => {
             tempArr:[
                 {
                     fName:"test fName",
-                    lName:"test fName",
+                    lName:"test lName",
                     age:23,
                     email:"test@gmail.com",
                     onlinestatus:true
