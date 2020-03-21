@@ -1,0 +1,3 @@
+.pragraph{
+    color:"black"
+}
